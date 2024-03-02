@@ -12,6 +12,7 @@ L'objectif est d'identifier les variants communs et leur évolution à travers d
 - **Comparaisons Séquentielles** : Analyse des séquences ALT pour trouver des variants génomiques identiques entre différents passages en tenant compte d'une tolérance de longueur de ±10 paires de bases.
 - **Filtrage Basé sur les Données Excel** : Les données génomiques sont extraites de fichiers Excel, chaque feuille correspondant à un passage différent du virus.
 - **Enregistrement des Résultats** : Les variants identiques trouvés sont enregistrés dans de nouvelles feuilles Excel pour une analyse ultérieure.
+- **Script evolution_variant.py** : Un script Python supplémentaire est utilisé pour automatiser l'analyse des variants à travers les passages, en comparant les séquences génétiques pour identifier des similitudes et des différences significatives.
 
 ## Dépendances
 
@@ -36,6 +37,3 @@ L'objectif est d'identifier les variants communs et leur évolution à travers d
 - **Communs_Apres_Choc** : Variants présents dans les passages suivant immédiatement le choc thermique.
 - **Communs_[Passage1]_[Passage2]** : Variants communs entre deux passages spécifiques.
 
-## Conclusion
-
-Cet outil permet une analyse systématique et reproductible des variants viraux pour étudier leur adaptation et évolution dans différentes conditions expérimentales.
