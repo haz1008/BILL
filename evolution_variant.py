@@ -18,10 +18,9 @@ def find_common_variants(donnees):
     for df in donnees[1:]:
         common_variants = common_variants.merge(df[['CHROM', 'POS', 'INFO']], on=['CHROM', 'POS'], how='inner', suffixes=('', '_next'))
         
-        # Filter variants by comparing SVLEN within tolerance
+     
         common_variants = common_variants[common_variants.apply(lambda row: is_similar_length(extract_info_value(row['INFO'], 'SVLEN'), extract_info_value(row['INFO_next'], 'SVLEN')), axis=1)]
         
-        # Drop the 'INFO_next' column after comparison
         common_variants.drop('INFO_next', axis=1, inplace=True)
     
     return common_variants
